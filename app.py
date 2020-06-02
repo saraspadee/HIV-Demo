@@ -7,17 +7,17 @@ import tweepy as tw
 import pandas as pd
 
 app = Flask(__name__)
+
 model = pickle.load(open('finalmodel.pickle','rb'))
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template('index.html')
 
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    #function to predict the input tweet
-    sample = ""
+  
     if request.method =='POST':
         newDate = request.form["date"]
 
@@ -52,5 +52,5 @@ def predict():
 
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug = True)
