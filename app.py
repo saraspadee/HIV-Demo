@@ -3,7 +3,6 @@ from flask import Flask,request, url_for, redirect, render_template
 import pickle
 
 #import libraries to generate tweet
-import os
 import tweepy as tw
 import pandas as pd
 
