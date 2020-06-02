@@ -59,12 +59,9 @@
 <!--Display Graph and result-->
    <div class="inside-container2">
       <p style ='color:white'> Tweet : {{text}}</p>
-      {% if prediction == 1 %}
-      <p style ='color:white'> Prediction : This tweet is related to HIV </p>
-      {% elif prediction == 2 %}
-      <p style ='color:white'> Prediction : This tweet is not related to HIV </p>
-      {% endif %}
-
+     
+      <p style ='color:white'>{{prediction}} </p>
+   
     
     </div>
 
