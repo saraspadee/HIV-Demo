@@ -46,11 +46,10 @@ def predict():
                 
         pred  = model.predict([sample])
         if pred == 1:
-            return render_template("index.html",prediction = "Prediction : This tweet is HIV related")
+            return render_template("index.html",prediction = "Prediction : This tweet is HIV related",text=sample)
         elif pred == 2:
-            return render_template("index.html",prediction = "Prediction : This tweet is not related to HIV")
+            return render_template("index.html",prediction = "Prediction : This tweet is not related to HIV",text=sample)
 
-        return render_template('index.html', text = sample)
 
       
         
