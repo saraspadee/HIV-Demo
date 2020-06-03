@@ -19,6 +19,13 @@
    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" type="text/css">
 
     <title>HIV Predictor</title>
+	  <script type="text/javascript">
+			function refreshPage(){
+				if(confirm("Are you sure, want to refresh?")){
+					location.reload();
+				}				
+			}
+	</script>
   </head>
   <body>
 
@@ -64,7 +71,7 @@
    
 	<div class="formPosition" >
 	<div class="rd-btn">
-            <button onClick = "history.go(0)"class="read-more"> Refresh Page </button>
+            <button onClick ='refreshPage()' class="read-more"> Refresh Page </button>
         </div>
 	</div>
     
